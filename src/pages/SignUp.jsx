@@ -17,6 +17,8 @@ const SignUp = () => {
     try {
       const {email , password} = formValue
       await createUserWithEmailAndPassword(fireBaseAuth , email , password)
+      formValue.email = ""
+      formValue.password = ""
       console.log(email , password)
     } catch (error) {
       console.log(error)
@@ -61,7 +63,7 @@ const SignUp = () => {
                 type="password"
                 placeholder="Password"
                 name="password"
-                className="text-white justify-center mx-[0.75rem] items-center px-[1rem] py-[0.75rem] w-[50%] rounded-md border-2 border-gray-600 bg-transparent"
+                className="text-white justify-center my-4 mx-[0.75rem] items-center px-[1rem] py-[0.75rem] w-[50%] rounded-md border-2 border-gray-600 bg-transparent"
                 value={formValue.password}
                 onChange={(e) =>
                   setFormValue(formValues=>({
@@ -101,7 +103,7 @@ const SignUp = () => {
               </button>
             )}
           </div>
-          <button className="mx-4 text-white font-bold text-[1.5rem] md:text-[0.75rem] px-[0.75rem] md:px-[1.25rem] rounded-md py-[0.75rem] bg-red-500"
+          <button className="mx-4 text-white font-bold text-[0.75rem] md:text-[1rem] px-[0.75rem] md:px-[1.25rem] rounded-md py-[0.75rem] bg-red-500"
           onClick={handler}
           >Sign Up</button>
         </div>

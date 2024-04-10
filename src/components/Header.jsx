@@ -22,7 +22,7 @@ const Header = () => {
             हिन्दी
           </option>
         </select>
-        <button className="mx-4 text-white font-bold text-[0.75rem] md:text-[0.75rem] px-[0.75rem] md:px-[1.25rem] rounded-md py-[0.75rem] bg-red-500">Login In</button>
+        <button className="mx-4 text-white font-bold text-[0.75rem] px-[0.75rem] md:px-[1.25rem] rounded-md py-[0.75rem] bg-red-500">Login</button>
       </div>
     </div>
   );
