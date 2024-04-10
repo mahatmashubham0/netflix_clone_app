@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .background-image {
-  background: rgb(0 0 0 / 60%) 
+  background: rgb(0 0 0 / 60%);
 }
 
 .back-image {
@@ -13,4 +13,14 @@
     rgba(0, 0, 0, 0) 60%,
     rgba(0, 0, 0, 0.8) 100%
   );
+}
+
+.show-search {
+  border: 1px solid black;
+  > input {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
 }
